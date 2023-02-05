@@ -1,11 +1,5 @@
-import System;
-import System.Collections.Generic;
-import System.Linq;
-import System.Text;
 
-namespace Example
-{
-    class Stack
+   public class Stack
     {
         private int count, size;
         private int[] array;
@@ -17,12 +11,12 @@ namespace Example
             count = 0;
         }
 
-        public bool isFull()
+        public boolean isFull()
         {
             return count == size;
         }
 
-        public bool isEmpty()
+        public boolean isEmpty()
         {
             return count == 0;
         }
@@ -42,7 +36,7 @@ namespace Example
             else
                 //return -1;
             //return default(int);
-            throw new InvalidOperationException("Stack empty!");
+            	return -1;
         }
 
         public int top()
@@ -52,16 +46,15 @@ namespace Example
             else
                 //return -1;
                 //return default(int);
-                throw new InvalidOperationException("Stack empty!");
+            	  return -1;
         }
 
-        public string toString()
+        public String toString()
         {
-            string s = "";
+            String s = "";
             for (int i = 0; i < count; i++)
-                s = s + array[i].ToString() + " ";
+                s = s + array[i] + " ";
 
             return s;
         }
     }
-}
